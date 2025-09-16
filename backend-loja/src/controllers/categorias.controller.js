@@ -1,4 +1,4 @@
-import { pool } from "../db.js";
+import pool from "../db.js";
 
 /**
  * Tabela: categorias
@@ -126,3 +126,4 @@ export async function deletarCategoria(req, res) {
     res.status(500).json({ message: "Erro ao deletar categoria" });
   }
 }
+
