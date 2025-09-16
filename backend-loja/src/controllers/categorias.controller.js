@@ -4,7 +4,7 @@ import pool from "../db.js";
 export async function listarCategorias(req, res) {
   try {
     const [rows] = await pool.query(
-      "SELECT id, nome FROM categorias ORDER BY nome COLLATE utf8mb4_0900_ai_ci ASC"
+      "SELECT id, nome FROM categorias ORDER BY nome ASC"
     );
     res.json(rows);
   } catch (err) {
@@ -12,3 +12,4 @@ export async function listarCategorias(req, res) {
     res.status(500).json({ erro: "Falha ao listar categorias." });
   }
 }
+
