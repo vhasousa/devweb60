@@ -1,4 +1,4 @@
-import { pool } from "../db.js";
+import pool from "../db.js";
 
 /**
  * Tabela: marcas
@@ -123,3 +123,4 @@ export async function deletarMarca(req, res) {
     res.status(500).json({ message: "Erro ao deletar marca" });
   }
 }
+
